@@ -17,4 +17,5 @@ RUN wget -q -O /tmp/hbase-1.2.4-bin.tar.gz http://www.eu.apache.org/dist/hbase/1
     rm /tmp/hbase-1.2.4-bin.tar.gz && \
     mv /usr/local/hbase-1.2.4 /usr/local/hbase && \
     mv /usr/local/hbase-env.sh /usr/local/hbase/conf/hbase-env.sh && \
-    mv /usr/local/bashrc ~/.bashrc || cat /tmp/out.log
+    mv /usr/local/bashrc ~/.bashrc && \
+    cat /tmp/out.log || true
