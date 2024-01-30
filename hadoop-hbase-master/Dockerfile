@@ -5,6 +5,9 @@ MAINTAINER sgerard <sgerard@emasphere.com>
 COPY files/hadoop/* /tmp/
 COPY files/hbase/* /tmp/
 COPY docker-entrypoint.sh /tmp/
+COPY docker-entrypoint.sh /root/
+
+RUN chmod +x /tmp/docker-entrypoint.sh
 
 ENV HADOOP_INSTALL /usr/local/hadoop
 
