@@ -8,10 +8,13 @@ COPY docker-entrypoint.sh /tmp/
 
 ENV HADOOP_INSTALL /usr/local/hadoop
 
-# Criar diretórios necessários
-RUN mkdir -p ~/hdfs/namenode \
-    && mkdir -p ~/zookeeper \
-    && mkdir -p ~/hdfs/datanode
+# Certifique-se de que o diretório /usr/local/hbase existe
+RUN mkdir -p /usr/local/hbase
+
+# Crie os diretórios necessários
+RUN mkdir -p /usr/local/hbase/hdfs/namenode \
+    && mkdir -p /usr/local/hbase/zookeeper \
+    && mkdir -p /usr/local/hbase/hdfs/datanode
 
 # Mover arquivos de configuração e scripts
 RUN mv /tmp/hdfs-site.xml $HADOOP_INSTALL/etc/hadoop/hdfs-site.xml \
