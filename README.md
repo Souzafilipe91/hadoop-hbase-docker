@@ -59,7 +59,7 @@ $ tree
 ###Usage
 ####1] Clone git repository
 ```
-$ git clone https://github.com/krejcmat/hadoop-hbase-docker.git
+$ git clone https://github.com/Souzafilipe91/hadoop-hbase-docker.git
 $ cd hadoop-hbase-docker
 ```
 
