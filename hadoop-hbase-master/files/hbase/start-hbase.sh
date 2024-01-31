@@ -3,6 +3,8 @@
 
 hadoop_master="serene_greider"
 hadoop_slave="slave1"   
+hbase_home="/usr/local/hbase"
+
 start_hbase_script="/usr/local/hbase/hbase/start-hbase.sh"
 
 echo -e "starting hbase on master \n"
