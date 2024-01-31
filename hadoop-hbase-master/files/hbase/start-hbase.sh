@@ -13,4 +13,5 @@ winpty docker exec -it slave1 bash -c "cd $hbase_home/hbase && ./start-hbase.sh"
 
 sleep 5
 echo -e "starting hbase shell  \n"
-winpty exec -it serene_greider bash -c "cd \"$hbase_home\" && ./bin/hbase shell"
+
+winpty docker exec -it serene_greider bash -c "cd \"$hbase_home\" && ./bin/hbase shell"
