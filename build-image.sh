@@ -10,6 +10,9 @@ then
 	exit 1
 fi
 
+if [ $# -gt 0 ]; then
+  docker rm -f slave1.krejcmat.com slave2.krejcmat.com master.krejcmat.com
+fi
 # founction for delete images
 function docker_rmi()
 {
