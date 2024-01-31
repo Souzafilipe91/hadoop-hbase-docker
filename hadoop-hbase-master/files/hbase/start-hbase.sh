@@ -3,15 +3,14 @@
 
 hadoop_master="serene_greider"
 hadoop_slave="slave1"   
-hbase_home="/usr/local/hbase"
+start_hbase_script="/d/hadoop-hbase-docker/hadoop-hbase-master/files/hbase/start-hbase.sh"
 
 echo -e "starting hbase on master \n"
-winpty docker exec -it serene_greider bash -c "cd $hbase_home/hbase && ./start-hbase.sh"
+winpty docker exec -it "$hadoop_master" bash -c "cd \"$start_hbase_script\" && ./start-hbase.sh"
 
 echo -e "starting hbase on slaves \n"
-winpty docker exec -it slave1 bash -c "cd $hbase_home/hbase && ./start-hbase.sh"
+winpty docker exec -it "$hadoop_slave" bash -c "cd \"$start_hbase_script\" && ./start-hbase.sh"
 
 sleep 5
 echo -e "starting hbase shell  \n"
-
-winpty docker exec -it serene_greider bash -c "cd \"$hbase_home\" && ./bin/hbase shell"
+winpty docker exec -it "$hadoop_master" bash -c "cd \"$start_hbase_script\" && ./bin/hbase shell"
