@@ -1,5 +1,10 @@
 #!/bin/bash
-hadoop_home=/usr/local/hbase
+#hadoop_home=/usr/local/hbase
+
+hadoop_master="serene-greider"  # Substitua pelo nome real do seu contêiner Hadoop Master
+hadoop_slave="slave1"    # Substitua pelo nome real do seu contêiner Hadoop Slave
+hbase_home="D:/hadoop-hbase-docker/hadoop-hbase-master/files/hbase"
+
 cd $hadoop_home
 echo -e "starting hbase \n"
 ./bin/start-hbase.sh
