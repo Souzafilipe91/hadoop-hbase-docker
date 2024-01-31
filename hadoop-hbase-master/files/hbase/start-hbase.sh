@@ -6,10 +6,11 @@ hadoop_slave="slave1"
 hbase_home="/usr/local/hbase"
 
 echo -e "starting hbase on master \n"
-winpty docker exec -it "$hadoop_master" bash -c "cd \"$hbase_home\" && ./bin/start-hbase.sh"
+winpty docker exec -it "$(echo $hadoop_master)" bash -c "cd $hbase_home && ./start-hbase.sh"
 
 echo -e "starting hbase on slaves \n"
-winpty docker exec -it "$hadoop_slave" bash -c "cd \"$hbase_home\" && ./bin/start-hbase.sh"
+winpty docker exec -it "$(echo $hadoop_slave)" bash -c "cd $hbase_home && ./start-hbase.sh"
+
 
 #echo -e "starting local master beckup \n"
 #./bin/local-master-backup.sh start 1
