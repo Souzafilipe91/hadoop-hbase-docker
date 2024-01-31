@@ -6,10 +6,10 @@ hadoop_slave="slave1"
 hbase_home="/d/hadoop-hbase-docker/hadoop-hbase-master/files/hbase"
 
 echo -e "starting hbase on master \n"
-winpty docker exec -it "$hadoop_master" bash -c "cd $hbase_home && ./start-hbase.sh"
+winpty docker exec -it "$hadoop_master" bash -c "cd \"$hbase_home\" && ./bin/start-hbase.sh"
 
 echo -e "starting hbase on slaves \n"
-winpty docker exec -it "$hadoop_slave" bash -c "cd $hbase_home && ./start-hbase.sh"
+winpty docker exec -it "$hadoop_slave" bash -c "cd \"$hbase_home\" && ./bin/start-hbase.sh"
 
 #echo -e "starting local master beckup \n"
 #./bin/local-master-backup.sh start 1
@@ -22,4 +22,4 @@ winpty docker exec -it "$hadoop_slave" bash -c "cd $hbase_home && ./start-hbase.
 #./bin/local-regionservers.sh start 3
 sleep 5
 echo -e "starting hbase shell  \n"
-winpty docker exec -it "$hadoop_master" sh -c "cd $hbase_home && ./bin/hbase shell"
+winpty docker exec -it "$hadoop_master" bash -c "cd \"$hbase_home\" && ./bin/hbase shell"
