@@ -1,5 +1,8 @@
 #!/bin/bash
+#hadoop_home=/usr/local/hbase
 
+hadoop_master="serene_greider"
+hadoop_slave="slave1"   
 start_hbase_script="/usr/local/hbase/hbase/start-hbase.sh"
 
 echo -e "starting hbase on master \n"
