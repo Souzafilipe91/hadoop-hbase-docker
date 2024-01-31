@@ -1,6 +1,6 @@
 #!/bin/bash
 
-hadoop_master="serene-greider"  # Substitua pelo nome real do seu contêiner Hadoop Master
+hadoop_master="serene_greider"  # Substitua pelo nome real do seu contêiner Hadoop Master
 hadoop_slave="slave1"    # Substitua pelo nome real do seu contêiner Hadoop Slave
 hbase_home="D:/hadoop-hbase-docker/hadoop-hbase-master/files/hbase"
 
