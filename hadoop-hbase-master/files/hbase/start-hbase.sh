@@ -7,7 +7,7 @@ hbase_home="D:/hadoop-hbase-docker/hadoop-hbase-master/files/hbase"
 
 cd $hadoop_home
 echo -e "starting hbase \n"
-./bin/start-hbase.sh
+${hbase_home}/start-hbase.sh
 
 #echo -e "starting local master beckup \n"
 #./bin/local-master-backup.sh start 1
