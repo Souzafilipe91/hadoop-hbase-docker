@@ -2,7 +2,7 @@
 
 hadoop_master="serene_greider"  # Substitua pelo nome real do seu contêiner Hadoop Master
 hadoop_slave="slave1"    # Substitua pelo nome real do seu contêiner Hadoop Slave
-hbase_home="D:/hadoop-hbase-docker/hadoop-hbase-master/files/hbase"
+hbase_home="/d/hadoop-hbase-docker/hadoop-hbase-master/files/hbase"
 
 
 echo -e "starting hbase on master \n"
