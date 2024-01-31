@@ -3,7 +3,7 @@
 
 hadoop_master="serene_greider"
 hadoop_slave="slave1"   
-hbase_home="/d/hadoop-hbase-docker/hadoop-hbase-master/files/hbase"
+hbase_home="/usr/local/hbase"
 
 echo -e "starting hbase on master \n"
 winpty docker exec -it "$hadoop_master" bash -c "cd \"$hbase_home\" && ./bin/start-hbase.sh"
